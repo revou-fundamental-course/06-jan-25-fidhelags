@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="css\style.css">
 </head>
 
-<body>
+
+<body></body>
     <!-- logo & navigation -->
     <header class="main-header">
         <!-- logo -->
         <div class="logo-icon">
             <h1 class="logo-text">pixelsbycode</h1>
         </div>        
-        
-         <!-- NAV -->
-          <nav>
+
+        <!-- NAV -->
+          <nav class="menu">
             <a href= "#home-page" class="left-nav"> Home </a>
             <a href= "#our-profile"> Our Profile </a>
             <a href= "#portfolio"> Portfolio </a>
@@ -30,13 +31,20 @@
     <main>
         <!-- Home -->
         <section>
+            <header>
+                <h1 class="welcoming-h1">Hi <span id="user-greeting">User</span>, Welcome to Our Website! </h1>
+                <p class="welcoming-p"> Website of pixelsbycode. </p>
+            </header>
             <div class="banner-image" id="home-page">
-                <header>
-                    <h1 class="welcoming-h1">Hi <span id="user-greeting">User</span>, Welcome to Our Website! </h1>
-                    <p class="welcoming-p"> Website of pixelsbycode. </p>
-                </header>
-
-
+                <div class="image">
+                    <p class="desc-p"> 
+                        At pixelsbycode, we specialize in combining creativity and technology to help businesses succeed in the digital world. Our services span across graphic design, photography, videography, UI/UX design, web development, technology solutions, and business strategy, providing comprehensive solutions tailored to your needs.
+                        Our graphic design team creates unique and memorable designs that bring your brand's identity to life, while our photography and videography services capture the essence of your business, whether through stunning product shots or engaging promotional videos. We understand the power of visuals and work to ensure that every image and video reflects your brand's values.
+                        Our UI/UX design focuses on creating seamless and user-friendly digital experiences, ensuring your website or app not only looks great but is intuitive and easy to navigate. Coupled with our web development services, we build responsive, high-performance websites that are optimized for both functionality and user engagement.
+                        Additionally, our technology solutions help streamline your operations, while our business strategy services assist in identifying growth opportunities and enhancing your competitive edge.
+                        At Ppixelsbycode, we are committed to delivering high-quality, customized solutions that drive business growth and help you connect with your audience. Whether you need a new website, branding overhaul, or video content, we're here to help you achieve your goals with creativity and precision.
+                     </p>
+                </div>
             </div>
         </section>
 
@@ -69,24 +77,78 @@
             <div class="banner-portfolio" id="portfolio">
                 <header>
                     <h1 class="welcoming-h1">Portfolio</h1>
+                    <div class="portfolio-container">
+                        <div class="image-portfolio1">
+                            <div class="portfolio1">
+                                <h1 class="portfolio-h1">Custom Software for "EduTech"</h1>
+                                <p class="portfolio-p">Edutech, an online learning platform, required a custom software solution for course management, student tracking, and content delivery.
+                                We developed a robust back-end system and integrated it with a front-end interface to ensure smooth user interaction.</p>
+                                <p class="portfolio-p">Project Highlights:</p>
+                                <li class="portfolio-li">Backend system development</li>
+                                <li class="portfolio-li">Integration with front-end user interface</li>
+                                <li class="portfolio-li">User authentication and data security</li>
+                                <li class="portfolio-li">Course tracking and reporting features</li>
+                            </div>
+                        </div>
+                        <div class="image-portfolio2">
+                            <div class="portfolio2">
+                                <h1 class="portfolio-h1">Website for "HandmadeTreasures"</h1>
+                                <p class="portfolio-p">HandmadeTreasures needed an online platform to showcase and sell their handcrafted jewelry. We developed a fully customized e-commerce website with a seamless shopping experience and a visually stunning product showcase.</p>
+                                <p class="portfolio-p">Project Highlights:</p>
+                                <li class="portfolio-li">Custom design tailored to photography</li>
+                                <li class="portfolio-li">Full-screen image gallery</li>
+                                <li class="portfolio-li">Contact form and booking system</li>
+                                <li class="portfolio-li">SEO-friendly structure</li>
+                            </div>
+                        </div>
+                    </div>
                 </header>  
             </div>
         </section>
 
         <!-- Message Us -->
         <section>
-            <div class="banner-messageUs" id="message-us">
-                <header>
-                    <h1 class="welcoming-h1">Message Us</h1>
-                </header>
+            <h1 class="welcoming-h1" id="message-us">Message Us</h1>
+                <header class="messageUs-header">
+                    <form id="form-messageUs" onsubmit="submitForm(event)">
+                        <table class="messageUs-form">
+                            <tr>
+                                <td>Nama:</td>
+                                <td><input type="text" id="name" name="name" required></td>
+                            </tr>
+                            <tr>
+                                <td>Tanggal Lahir:</td>
+                                <td><input type="date" id="birth-date" name="birth-date" required></td>
+                            </tr>
+                            <tr>
+                                <td>Jenis Kelamin:</td>
+                                <td>
+                                    <input type="radio" id="gender-male" name="gender" value="Male" required> Male
+                                    <input type="radio" id="gender-female" name="gender" value="Female" required> Female
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pesan:</td>
+                                <td><textarea id="message" name="message" required></textarea></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><button type="submit">Submit</button></td>
+                            </tr>
+                        </table>
+                    </form>                    
 
-            </div>
+                    <div id="response" class="response"></div>
+                </header>
+                <script src="js\script.js"></script>
         </section>
     </main>
 
     <!-- Footer -->
+    <hr class="line-hr">
     <footer>
         <p>&copy 2025 - All Rights Reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
