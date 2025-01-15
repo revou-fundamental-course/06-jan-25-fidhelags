@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Portfolio RevoU Fidhela</title>
+    <title>Project Portfolio RevoU</title>
 
     <link rel="stylesheet" href="css\style.css">
 </head>
@@ -32,7 +32,8 @@
         <!-- Home -->
         <section>
             <header>
-                <h1 class="welcoming-h1">Hi <span id="user-greeting">User</span>, Welcome to Our Website! </h1>
+                <h1 class="welcoming-h1"><div id="responseUser"></div></h1>
+                <script src="js\script.js"></script>
                 <p class="welcoming-p"> Website of pixelsbycode. </p>
             </header>
             <div class="banner-image" id="home-page">
@@ -116,22 +117,22 @@
                     <form id="form-messageUs" onsubmit="submitForm(event)">
                         <table class="messageUs-form">
                             <tr>
-                                <td>Nama:</td>
+                                <td>Name:</td>
                                 <td><input type="text" id="name" name="name" required></td>
                             </tr>
                             <tr>
-                                <td>Tanggal Lahir:</td>
+                                <td>Birth Date:</td>
                                 <td><input type="date" id="birth-date" name="birth-date" required></td>
                             </tr>
                             <tr>
-                                <td>Jenis Kelamin:</td>
+                                <td>Gender:</td>
                                 <td>
                                     <input type="radio" id="gender-male" name="gender" value="Male" required> Male
                                     <input type="radio" id="gender-female" name="gender" value="Female" required> Female
                                 </td>
                             </tr>
                             <tr>
-                                <td>Pesan:</td>
+                                <td>Message:</td>
                                 <td><textarea id="message" name="message" required></textarea></td>
                             </tr>
                             <tr>
