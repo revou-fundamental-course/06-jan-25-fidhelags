@@ -1,6 +1,7 @@
-const user = window.prompt("What is your name?");
+/*const user = window.prompt("What is your name?");
 const responseUser = document.getElementById('responseUser');
-responseUser.innerHTML = `<strong>Hdsadi ${user}, Welcome to Our Website!</strong><br>`;
+const userName = (user === null || user.trim() === "") ? "User" : user;
+responseUser.innerHTML = `<strong>Hi ${ userName}, Welcome to Our Website!</strong><br>`;*/
 
 function submitForm(event) {
     event.preventDefault();
