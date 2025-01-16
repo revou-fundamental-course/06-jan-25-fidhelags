@@ -3,6 +3,34 @@ const responseUser = document.getElementById('responseUser');
 const userName = (user === null || user.trim() === "") ? "User" : user;
 responseUser.innerHTML = `<strong>Hi ${ userName}, Welcome to Our Website!</strong><br>`;
 
+let indexBanner = 0;
+
+changeBackground();
+
+function nextBanner() {
+    indexBanner = indexBanner + 1;
+
+    changeBackground();
+}
+
+function changeBackground() {
+    let bannerList = document.getElementsByClassName('banner-image');
+    
+    if (indexBanner >bannerList.length - 1) {
+        indexBanner = 0;
+    }
+
+    for (let i = 0; i < bannerList.length; i++) {
+        console.log(i);
+        console.log(bannerList[i]);
+        bannerList[i].style.display = 'none';
+    }
+
+    bannerList[indexBanner].style.display = 'block';
+}
+
+setInterval(nextBanner, 5000);
+
 function submitForm(event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
@@ -23,4 +51,6 @@ function submitForm(event) {
         <strong>Gender:</strong> ${gender} <br>
         <strong>Message:</strong> ${message} <br>
     `;
+
+    document.getElementById('form-messageUs').reset();
 }
