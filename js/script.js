@@ -29,7 +29,7 @@ function changeBackground() {
     bannerList[indexBanner].style.display = 'block';
 }
 
-setInterval(nextBanner, 5000);
+setInterval(nextBanner, 3500);
 
 function submitForm(event) {
     event.preventDefault();
